@@ -16,6 +16,9 @@ mongoose.connect('mongodb+srv://nirmal:nirmal123@cluster0.lvvxoez.mongodb.net/?r
     .catch(err => console.error('Failed to connect to MongoDB', err));
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
